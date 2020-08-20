@@ -1,11 +1,18 @@
 import React from 'react';
 import './App.css';
-import UsersList from './components/UsersList'
+import Navbar from './components/Navbar'
+import { Switch, Route } from 'react-router-dom';
+import UsersPage from './components/UsersPage';
+
 
 function App() {
   return (
     <div className="App">
-      <UsersList />
+      <Navbar />
+      <Switch >
+        <Route exact path='/users' render={() => <UsersPage/>}/>
+      </Switch>
+      
     </div>
   );
 }
